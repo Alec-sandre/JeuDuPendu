@@ -74,5 +74,4 @@ def jeu_pendu(mot_a_deviner) : # Fonction qui effectue le jeu à partir d'un mot
         print(f"Vous avez gagné ! Le mot était : {mot_a_deviner}.")
 
 
-
 jeu_pendu(selection_mots())
