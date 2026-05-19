@@ -9,3 +9,16 @@ Vous pouvez jouer et relancer, c'est parti !
 
 import random # permet d'utiliser la fonction random pour choisir un mot aléatoire
 
+''' Cette fonction à pour but de ressortir la liste de mots extraite du fichier texte demandé. Il faut que le document
+renseigné soit dans le répertoire de travail.
+'''
+def creation_liste_mots(emplacement_mots):
+    try: # On essaie d'ouvrir le fichier
+        with open(emplacement_mots, 'r', encoding='utf-8') as mots_pendu_source:
+            mots_pendu_liste = mots_pendu_source.readlines() # On organise le document en forme de liste
+    except FileNotFoundError: # Le fichier ne marche pas / aucun fichier n'a été renseigné
+        print("Le document n'est pas dans ce répertoire. Choix de la liste par défaut")
+        with open('mots_pendu.txt', 'r', encoding='utf-8') as mots_pendu_source:
+            mots_pendu_liste = mots_pendu_source.readlines()
+    return mots_pendu_liste
+
