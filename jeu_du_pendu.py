@@ -12,7 +12,10 @@ import random # permet d'utiliser la fonction random pour choisir un mot aléato
 ''' Cette fonction à pour but de ressortir la liste de mots extraite du fichier texte demandé. Il faut que le document
 renseigné soit dans le répertoire de travail.
 '''
-def selection_mots(emplacement_mots):
+def selection_mots():
+    print("Le document à utiliser doit être de type .txt et il faut ajouter l'extension lorsque le nom est donné.")
+    print("Il y a un mot par ligne dans le document à utiliser.")
+    emplacement_mots = input("Renseignez le nom du document à utiliser : ")
     if isinstance(emplacement_mots, str) : # Confirme qu'une chaîne de caractère permette de remonter au fichier
 
         try: # On essaie d'ouvrir le fichier
